@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>test api</title>
+	</head>
+	<body>
+		<hr />
+		<p> <h4>Add user</h4>
+			<form action="http://localhost:8080/user" method="POST">
+				<div>email</div>
+				<input type = "text" name = "email">
+				<div>first_name</div>
+				<input type = "text" name = "first_name">
+				<div>last_name</div>
+				<input type = "text" name = "last_name">
+				<input type = "submit">
+
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Get user</h4>
+			<form action="http://localhost:8080/user" method="GET">
+				<div>api key</div>
+				<input type = "text" name = "api_key">
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Delete user</h4>
+			<form action="http://localhost:8080/user" method="GET">
+				<div>api key</div>
+				<input type = "text" name = "api_key">
+				<input type = "hidden" name = "delete" value = "1" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Create album</h4>
+			<form action="http://localhost:8080/albums" method="GET">
+				<div>name</div>
+				<input type = "text" name = "name">
+				<div>user_id</div>
+				<input type = "text" name = "user_id">
+				<div>metadata</div>
+				<input type = "text" name = "metadata">
+				<input type = "hidden" name = "method" value = "create" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Read album</h4>
+			<form action="http://localhost:8080/albums" method="GET">
+				<div>album id</div>
+				<input type = "text" name = "id">
+				<input type = "hidden" name = "method" value = "read" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Update album</h4>
+			<form action="http://localhost:8080/albums" method="GET">
+				<div>id album</div>
+				<input type = "text" name = "id">
+				<div>new name</div>
+				<input type = "text" name = "name">
+				<div>new metadata</div>
+				<input type = "text" name = "metadata">
+				<input type = "hidden" name = "method" value = "update" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Delete album</h4>
+			<form action="http://localhost:8080/albums" method="GET">
+				<div>id album</div>
+				<input type = "text" name = "id">
+				<input type = "hidden" name = "method" value = "delete" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Create tracks</h4>
+			<form action="http://localhost:8080/tracks" method="GET">
+				<div>name</div>
+				<input type = "text" name = "name">
+				<div>album id</div>
+				<input type = "text" name = "album_id">
+				<input type = "hidden" name = "method" value = "create" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Read tracks</h4>
+			<form action="http://localhost:8080/tracks" method="GET">
+				<div>id track</div>
+				<input type = "text" name = "id">
+				<input type = "hidden" name = "method" value = "read" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Update tracks</h4>
+			<form action="http://localhost:8080/tracks" method="GET">
+				<div>track id</div>
+				<input type = "text" name = "id">
+				<div>new name</div>
+				<input type = "text" name = "name">
+				<div>new album</div>
+				<input type = "text" name = "album_id">
+				<input type = "hidden" name = "method" value = "update" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+		<p> <h4>Delete tracks</h4>
+			<form action="http://localhost:8080/tracks" method="GET">
+				<div>id track</div>
+				<input type = "text" name = "id">
+				<input type = "hidden" name = "method" value = "delete" >
+				<input type = "submit">
+			</form>
+		</p>
+		<hr />
+<script></script>
+	</body>
+</html>

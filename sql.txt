@@ -1,0 +1,21 @@
+CREATE TABLE USERS (email VARCHAR(30),
+first_name VARCHAR(30) not null,
+last_name  VARCHAR(30) not null,
+created TIMESTAMP not null,
+is_active BOOL not null,
+api_key UUID);
+
+CREATE UNIQUE INDEX email_index ON USERS(email);
+
+CREATE TABLE ALBUMS (id SERIAL primary key,
+name VARCHAR(40) not null,
+user_id UUID,
+metadata jsonb,
+created TIMESTAMP not null,
+updated TIMESTAMP not null);
+
+CREATE TABLE TRACKS (id SERIAL PRIMARY KEY,
+name VARCHAR(40),
+album_id INT,
+created TIMESTAMP not null,
+updated TIMESTAMP not null);

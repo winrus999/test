@@ -114,7 +114,6 @@ async def tracks(request):
         if method == 'read':
             res = str(dict(await conn.fetchrow('SELECT * FROM tracks WHERE id = ' + id)))
         if method == 'update':
-            print('UPDATE tracks SET name = \'' + name + '\', album_name = \'' + album_id + '\', updated = now() WHERE  id = ' + id)
             await conn.execute('UPDATE tracks SET name = \'' + name + '\', album_id = \'' + album_id + '\', updated = now() WHERE  id = ' + id)
         if method == 'delete':
             await conn.execute('DELETE FROM tracks WHERE id = \'' + str(id) + '\'')
